@@ -8,7 +8,9 @@ function NavBar() {
     <header className="fixed min-h-[5vh] w-screen bg-white shadow-md flex items-center justify-between px-5 z-10">
       {/* LOGO */}
       <Link to="/">
-        <div className="text-red-600 font-semibold cursor-pointer">ECOMMER</div>
+        <div className="text-red-600 font-semibold cursor-pointer text-xl">
+          ECOMMER
+        </div>
       </Link>
       {/* ICONS */}
       <div>
