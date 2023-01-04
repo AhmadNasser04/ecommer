@@ -9,9 +9,15 @@ function ProductShowcase({ image, sizes, name, color }) {
           alt="product"
           className="w-[300px] h-[300px] object-cover relative"
         />
-        <div className="w-full h-full absolute bg-blue-300 z-0 opacity-0 group-hover:opacity-70 transition ease-linear">
+        <div
+          className={`w-full h-full absolute bg-blue-300 z-0 opacity-0 group-hover:opacity-70 transition ease-linear ${
+            sizes.length === 0 && "cursor-pointer"
+          }`}
+        >
           <div className="flex flex-col items-center justify-center w-full h-full space-y-3">
-            <h1 className="text-white font-bold">Select size:</h1>
+            <h1 className="text-white font-bold">
+              {sizes.length !== 0 && "Select size:"}
+            </h1>
             <div className="space-x-5">
               {sizes.map((value, index) => (
                 <button
